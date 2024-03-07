@@ -6,6 +6,10 @@ const phoneNo = userContainer.querySelector("#phone-no");
 const email = userContainer.querySelector("#email");
 const streetAddress = userContainer.querySelector("#street-address");
 
+function sayHello() {
+  alert("Hello, world!");
+}
+
 window.onload = function () {
   console.log("Hello world");
   console.log(document.querySelector("#hello"));
@@ -21,6 +25,16 @@ window.onload = function () {
   phoneNo.innerText = user.phone;
   email.innerText = user.email;
   streetAddress.innerHTML = `${user.location.street.number}, ${user.location.street.name}, ${user.location.city}`;
+
+  // const button = document.querySelector("button");
+  // button.addEventListener("click", sayHello);
+  // button.addEventListener("click", sayHello);
+
+  // setTimeout(function () {
+  //   alert('Hello, world!')
+  // }, 5000);
+
+  // setTimeout(sayHello, 5000);
 };
 
 const serverResponse = {
